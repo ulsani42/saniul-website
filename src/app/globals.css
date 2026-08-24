@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+/* ===========================
+   DESIGN SYSTEM — Sani Ul
+   Premium editorial aesthetic
+   =========================== */
+
+@theme {
+  /* Colors — Warm, restrained palette */
+  --color-ivory: #FAF8F5;
+  --color-cream: #F5F1EB;
+  --color-sand: #E8E2D9;
+  --color-stone: #C4BAA9;
+  --color-muted: #9A9083;
+  --color-charcoal: #2A2520;
+  --color-ink: #1A1614;
+  --color-white: #FFFFFF;
+  --color-accent: #8B7355;
+  --color-accent-light: #A8956F;
+  --color-accent-dark: #6B5840;
+  --color-success: #5A7A5A;
+  --color-error: #9A4A4A;
+
+  /* Typography */
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", "system-ui", sans-serif;
+
+  /* Spacing scale */
+  --spacing-section: 7rem;
+  --spacing-section-mobile: 4rem;
+  --spacing-block: 3rem;
+
+  /* Container */
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --container-narrow: 800px;
+
+  /* Animation */
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.6s;
+  --duration-slower: 0.8s;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  background-color: var(--color-ivory);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   SELECTION
+   =========================== */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ===========================
+   SCROLLBAR
+   =========================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* ===========================
+   TYPOGRAPHY UTILITIES
+   =========================== */
+.text-editorial {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.text-body {
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+/* ===========================
+   ANIMATION UTILITIES
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===========================
+   LAYOUT UTILITIES
+   =========================== */
+.container-main {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding-inline: 2rem;
+  }
+  .container-wide {
+    padding-inline: 3rem;
+  }
+  .container-narrow {
+    padding-inline: 2rem;
+  }
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+.divider {
+  height: 1px;
+  background-color: var(--color-sand);
+  border: none;
+}
+
+/* ===========================
+   IMAGE CONTAINERS
+   =========================== */
+.image-editorial {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===========================
+   FOCUS STYLES
+   =========================== */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ===========================
+   CARD STYLES
+   =========================== */
+.card-premium {
+  background: var(--color-white);
+  border: 1px solid var(--color-sand);
+  transition: all var(--duration-normal) ease;
+}
+
+.card-premium:hover {
+  border-color: var(--color-stone);
+  box-shadow: 0 4px 24px rgba(42, 37, 32, 0.06);
+}
+
+/* ===========================
+   LINK UNDERLINE ANIMATION
+   =========================== */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--duration-normal) ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}

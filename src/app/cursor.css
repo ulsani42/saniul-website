@@ -1,0 +1,23 @@
+/* Interactive element cursor styles */
+a, button, [role="button"], label {
+  cursor: pointer;
+}
+
+button:disabled, [disabled], input:disabled, textarea:disabled, select:disabled {
+  cursor: not-allowed !important;
+}
+
+a[href=""], a:not([href]) {
+  cursor: default;
+}
+
+/* Gallery items */
+.gallery-item {
+  cursor: pointer;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
