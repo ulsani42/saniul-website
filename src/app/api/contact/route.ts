@@ -82,6 +82,27 @@ export async function POST(request: NextRequest) {
 
     await db.collection("messages").insertOne(doc);
 
+    if (process.env.GOOGLE_APPS_SCRIPT_URL) {
+      try {
+        await fetch(process.env.GOOGLE_APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name.trim(),
+            email: email.trim().toLowerCase(),
+            phone: phone && typeof phone === "string" ? phone.trim() : "",
+            subject: subject.trim(),
+            message: message.trim(),
+            date: new Date().toISOString()
+          }),
+        });
+      } catch (scriptError) {
+        console.error("Failed to push to Google Apps Script:", scriptError);
+      }
+    }
+
     if (process.env.RESEND_API_KEY) {
       try {
         const { Resend } = await import("resend");
