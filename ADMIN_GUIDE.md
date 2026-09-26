@@ -246,17 +246,17 @@ Your website already has built-in SEO features. Here is how to make sure search 
 
 1. Go to https://search.google.com/search-console
 2. Click "Add property"
-3. Enter your website URL: https://saniul.com
+3. Enter your website URL: https://saniul.vercel.app
 4. Verify ownership (choose HTML tag method — add the tag your developer gives you)
 5. Once verified, click "Sitemap" in the left menu
-6. Enter: https://saniul.com/sitemap.xml
+6. Enter: https://saniul.vercel.app./sitemap.xml
 7. Click "Submit"
 
 ### Step 2: Submit to Bing Webmaster Tools
 
 1. Go to https://www.bing.com/webmasters
 2. Add your website URL
-3. Submit your sitemap: https://saniul.com/sitemap.xml
+3. Submit your sitemap: https://saniul.vercel.app/sitemap.xml
 
 ### Step 3: Create an OG Image
 

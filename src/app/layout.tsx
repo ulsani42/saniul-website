@@ -7,7 +7,7 @@ import "./globals.css";
 import "./cursor.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saniul.com"),
+  metadataBase: new URL("https://saniul.vercel.app"),
   title: {
     default: `${person.name} — ${person.title}`,
     template: `%s — ${person.name}`,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://saniul.com",
+    url: "https://saniul.vercel.app",
     siteName: person.name,
     title: `${person.name} — ${person.title}`,
     description: `${person.name} is a business professional, entrepreneur, and Operations Manager at ${person.organization} in Bangladesh.`,
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://saniul.com",
+    canonical: "https://saniul.vercel.app",
   },
   icons: {
     icon: "/images/navbar.png",

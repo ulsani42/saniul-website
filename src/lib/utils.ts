@@ -4,7 +4,7 @@ export function cn(...inputs: ClassValue[]) {
   return clsx(inputs);
 }
 
-export const SITE_URL = "https://saniul.com";
+export const SITE_URL = "https://saniul.vercel.app";
 
 export const metadata = {
   title: "Sani Ul — Business Professional • Entrepreneur • Operations Manager",

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin/", "/api/"],
       },
     ],
-    sitemap: "https://saniul.com/sitemap.xml",
+    sitemap: "https://saniul.vercel.app/sitemap.xml",
   };
 }

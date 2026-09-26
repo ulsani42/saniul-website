@@ -10,7 +10,7 @@ export default function PersonSchema() {
     },
     description:
       "Sani Ul is a business professional, entrepreneur, and Operations Manager at Ayan Trading House based in Bangladesh.",
-    url: "https://saniul.com",
+    url: "https://saniul.vercel.app",
     sameAs: [],
     address: {
       "@type": "PostalAddress",

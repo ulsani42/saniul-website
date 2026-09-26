@@ -5,14 +5,14 @@ export default function WebsiteSchema() {
     name: "Sani Ul",
     description:
       "Sani Ul — Business Professional, Entrepreneur, and Operations Manager at Ayan Trading House.",
-    url: "https://saniul.com",
+    url: "https://saniul.vercel.app",
     author: {
       "@type": "Person",
       name: "Sani Ul",
     },
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://saniul.com/search?q={search_term_string}",
+      target: "https://saniul.vercel.app/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };

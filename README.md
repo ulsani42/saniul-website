@@ -48,7 +48,7 @@ Fill in the values in `.env.local`:
 | `RESEND_API_KEY` | Resend API key |
 | `ADMIN_EMAIL` | Admin login email |
 | `ADMIN_PASSWORD_HASH` | Bcrypt hash of admin password |
-| `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., https://saniul.com) |
+| `NEXT_PUBLIC_SITE_URL` | Site URL (e.g., https://saniul.vercel.app) |
 | `JWT_SECRET` | Secret key for JWT tokens |
 
 ## MongoDB Setup
